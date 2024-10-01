@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Açık arka plan rengi */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header ve Navigasyon */
+header {
+    background-color: #002f6c; /* MNG Kargo mavi rengi */
+    color: white;
+    padding: 20px 0;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 28px; /* Logo boyutu */
+    font-weight: bold;
+}
+
+nav {
+    display: inline-block;
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white; /* Yazı rengi */
+    text-decoration: none; /* Alt çizgi kaldırıldı */
+    transition: color 0.3s; /* Geçiş efekti */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Hover rengi */
+}
+
+/* Ana Banner */
+.banner {
+    background-color: #004080; /* Koyu mavi arka plan */
+    color: white;
+    text-align: center;
+    padding: 50px 0; /* Yükseklik ayarı */
+}
+
+.banner h2 {
+    font-size: 36px; /* Başlık boyutu */
+    margin-bottom: 10px; /* Alt boşluk */
+}
+
+.banner p {
+    font-size: 20px; /* Alt başlık boyutu */
+}
+
+/* Takip Bölümü */
+.tracking {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 30px 20px; /* İç boşluk */
+    border-radius: 8px; /* Kenar yuvarlama */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    margin: 20px 0; /* Dış boşluk */
+}
+
+.tracking h3 {
+    margin-bottom: 20px; /* Başlık altı boşluk */
+}
+
+.tracking form {
+    display: flex; /* Esnek kutu modeli */
+    justify-content: center; /* Ortalamak için */
+    align-items: center; /* Dikey ortalama */
+}
+
+.tracking input[type="text"] {
+    padding: 10px; /* İç boşluk */
+    border: 1px solid #ccc; /* Kenar rengi */
+    border-radius: 4px; /* Kenar yuvarlama */
+    width: 250px; /* Genişlik ayarı */
+    margin-right: 10px; /* Sağ boşluk */
+}
+
+.tracking button {
+    padding: 10px 20px; /* İç boşluk */
+    background-color: #002f6c; /* Mavi arka plan */
+    color: white; /* Yazı rengi */
+    border: none; /* Kenar yok */
+    border-radius: 4px; /* Kenar yuvarlama */
+    cursor: pointer; /* İmleç değişimi */
+    transition: background-color 0.3s; /* Geçiş efekti */
+}
+
+.tracking button:hover {
+    background-color: #004080; /* Hover rengi */
+}
+
+/* Hizmetler Bölümü */
+.services {
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    padding: 30px 20px; /* İç boşluk */
+}
+
+.services h3 {
+    margin-bottom: 20px; /* Başlık altı boşluk */
+}
+
+.service-item {
+    margin-bottom: 20px; /* Alt boşluk */
+    padding: 15px; /* İç boşluk */
+    background-color: white; /* Beyaz arka plan */
+    border-radius: 5px; /* Kenar yuvarlama */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+}
+
+/* Müşteri Yorumları Bölümü */
+.testimonials {
+    background-color: #ffffff; /* Beyaz arka plan */
+    padding: 30px 20px; /* İç boşluk */
+    margin: 20px 0; /* Dış boşluk */
+    border-radius: 8px; /* Kenar yuvarlama */
+}
+
+.testimonials h3 {
+    margin-bottom: 20px; /* Başlık altı boşluk */
+}
+
+.testimonial-item {
+    margin-bottom: 15px; /* Alt boşluk */
+}
+
+/* Footer */
+footer {
+    background-color: #002f6c; /* Mavi arka plan */
+    color: white; /* Yazı rengi */
+    text-align: center; /* Ortalanmış metin */
+    padding: 20px 0; /* İç boşluk */
+    margin-top: 20px; /* Üst boşluk */
+}
+
+/* Admin Paneli */
+.admin-tracking {
+    background-color: #f9f9f9; /* Açık gri arka plan */
+    padding: 30px 20px; /* İç boşluk */
+}
+
+.admin-tracking h3 {
+    margin-bottom: 20px; /* Başlık altı boşluk */
+}
+
+/* Modal Stilleri (Admin Paneli için) */
+.modal {
+    display: none; /* Başlangıçta gizli */
+    position: fixed; /* Sabit konum */
+    z-index: 1; /* Üstte görünmesi için */
+    left: 0;
+    top: 0;
+    width: 100%; /* Tam genişlik */
+    height: 100%; /* Tam yükseklik */
+    overflow: auto; /* Taşma durumunda kaydırma */
+    background-color: rgb(0, 0, 0); /* Arka plan rengi */
+    background-color: rgba(0, 0, 0, 0.4); /* Şeffaf arka plan */
+}
+
+.modal-content {
+    background-color: #fefefe; /* Beyaz arka plan */
+    margin: 15% auto; /* Ortala */
+    padding: 20px; /* İç boşluk */
+    border: 1px solid #888; /* Kenar rengi */
+    width: 80%; /* Genişlik */
+    max-width: 600px; /* Maksimum genişlik */
+    border-radius: 8px; /* Kenar yuvarlama */
+}
+
+.close {
+    color: #aaa; /* Kapatma simgesi rengi */
+    float: right; /* Sağda konumlandır */
+    font-size: 28px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yazı */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* Üzerine gelindiğinde renk değişimi */
+    text-decoration: none; /* Alt çizgi kaldırma */
+    cursor: pointer; /* İmleç değişimi */
+}

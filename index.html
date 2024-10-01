@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Kargo Şubesi</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Kargo Şubesi</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Anasayfa</a></li>
+                    <li><a href="#">Hizmetler</a></li>
+                    <li><a href="#">Takip</a></li>
+                    <li><a href="#">İletişim</a></li>
+                    <li><a href="admin.html">Admin</a></li> <!-- Admin bağlantısı -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="banner">
+            <div class="container">
+                <h2>Kargo Gönderimi Kolaylaştı!</h2>
+                <p>En hızlı kargo hizmeti ile gönderimlerinizi güvenle yapın.</p>
+                <button>Gönderim Başlat</button>
+            </div>
+        </section>
+
+        <section class="tracking">
+            <div class="container">
+                <h3>Kargo Takibi</h3>
+                <form id="tracking-form">
+                    <label for="tracking-code">Kargo Kodu:</label>
+                    <input type="text" id="tracking-code" placeholder="Kargo kodunu girin" required>
+                    <button type="submit">Takip Et</button>
+                </form>
+                <div id="tracking-result"></div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h3>Hizmetlerimiz</h3>
+                <div class="service-item">
+                    <h4>Yurt İçi Gönderim</h4>
+                    <p>Hızlı ve güvenilir yurt içi gönderim hizmeti.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Yurt Dışı Gönderim</h4>
+                    <p>Dünyanın dört bir yanına kargo gönderin.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Paket Takibi</h4>
+                    <p>Gönderilerinizi anlık olarak takip edin.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h3>Müşteri Yorumları</h3>
+                <div class="testimonial-item">
+                    <p>"Kargo gönderimlerim hep hızlı ve güvenli. Teşekkürler!"</p>
+                    <strong>- Ahmet Yılmaz</strong>
+                </div>
+                <div class="testimonial-item">
+                    <p>"MNG Kargo sayesinde uluslararası gönderimlerim çok kolaylaştı!"</p>
+                    <strong>- Elif Demir</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Kargo Şubesi. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script>
+        let trackingCodes = []; // Kargo kodlarını saklamak için bir dizi
+
+        document.getElementById('tracking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const trackingCode = document.getElementById('tracking-code').value;
+            trackingCodes.push(trackingCode); // Kullanıcı tarafından girilen kargo kodunu diziye ekle
+            const resultDiv = document.getElementById('tracking-result');
+
+            // Örnek kargo durumu verisi
+            const statuses = ["Dağıtımda", "Yolda", "Teslim Edildi"];
+            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+            resultDiv.innerHTML = `Kargo kodu: <strong>${trackingCode}</strong> için durum: <strong>${randomStatus}</strong>`;
+        });
+    </script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
